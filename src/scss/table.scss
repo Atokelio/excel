@@ -61,33 +61,34 @@
     }
   }
 
-  .col-resize {
+  .col-resize, .row-resize {
     position: absolute;
-    top: 0;
     bottom: 0;
     right: 0;
-    width: 4px;
     background-color: $primary-color;
     opacity: 0;
+    z-index: 100;
+
+    &:hover {
+      opacity: 1 !important;
+    }
   }
 
-  .col-resize:hover {
-    opacity: 1;
-    cursor: col-resize;
+  .col-resize {
+    top: 0;
+    width: 4px;
+
+    &:hover {
+      cursor: col-resize;
+    }
   }
 
   .row-resize {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     left: 0;
     height: 4px;
-    background-color: $primary-color;
-    opacity: 0;
-  }
 
-  .row-resize:hover {
-    opacity: 1;
-    cursor: row-resize;
+    &:hover {
+      cursor: row-resize;
+    }
   }
 }

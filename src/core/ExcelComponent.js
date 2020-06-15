@@ -4,6 +4,11 @@ export class ExcelComponent extends DomListener {
   constructor($root, options = {}) {
     super($root, options.listeners)
     this.name = options.name || ''
+
+    this.prepere()
+  }
+
+  prepere() {
   }
 
   // возвращает HTML шаблон компонента
